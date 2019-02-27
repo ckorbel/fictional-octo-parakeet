@@ -6,21 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [{type: 'server', name: 'test-server', content: 'just a test'}];
+  loadedFeature = 'recipes';
 
-  onServerAdded(serverData: {serverName: string, serverContent: string}) {
-    this.serverElements.push({
-      type: 'server',
-      name: serverData.serverName,
-      content: serverData.serverContent
-    });
+  onNavigate(feature: string) {
+    this.loadedFeature = feature; 
   }
 
-  onBlueprintAdded(bluePrintData: {serverName: string, serverContent: string}) {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: bluePrintData.serverName,
-      content: bluePrintData.serverContent
-    });
-  }
+
+  // serverElements = [{type: 'server', name: 'test-server', content: 'just a test'}];
+
+  // onServerAdded(serverData: {serverName: string, serverContent: string}) {
+  //   this.serverElements.push({
+  //     type: 'server',
+  //     name: serverData.serverName,
+  //     content: serverData.serverContent
+  //   });
+  // }
+
+  // onBlueprintAdded(bluePrintData: {serverName: string, serverContent: string}) {
+  //   this.serverElements.push({
+  //     type: 'blueprint',
+  //     name: bluePrintData.serverName,
+  //     content: bluePrintData.serverContent
+  //   });
+  // }
+
+  // onChangeFirst() {
+  //   this.serverElements[0].name = 'Changed';
+  // }
+
 }
